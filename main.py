@@ -62,8 +62,8 @@ if __name__ == "__main__":
         logging.info(f"Sending emails started")
         send_email(
             sender_email= Config.SENDER_EMAIL,
-            receiver_emails=[Config.EMAIL01],
-            # receiver_emails=[Config.EMAIL01, Config.EMAIL02],
+            # receiver_emails=[Config.EMAIL01],
+            receiver_emails=[Config.EMAIL01, Config.EMAIL02],
             subject="🔔🏠 Apartment Bot Update!",
             body = body,
             password=Config.SENDER_PASSWORD
