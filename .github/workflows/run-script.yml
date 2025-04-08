@@ -2,7 +2,7 @@ name: Scheduled Python Script
 
 on:
   schedule:
-    - cron: '*/2 * * * *'  # Every minute
+    - cron: '0 13,1 * * *'  # Every minute
   workflow_dispatch:       # Optional: manual trigger from GitHub UI
 
 jobs:
@@ -20,6 +20,7 @@ jobs:
       GOOGLE_MODEL: ${{ secrets.GOOGLE_MODEL }}
 
     steps:
+    
       - name: Checkout repository
         uses: actions/checkout@v3
 
