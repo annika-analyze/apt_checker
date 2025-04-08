@@ -1,0 +1,36 @@
+name: Scheduled Python Script
+
+on:
+  schedule:
+    - cron: '0 9,21 * * *'  # Runs at 09:00 and 21:00 UTC daily
+  workflow_dispatch:         # Optional: manual trigger from GitHub UI
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    env:
+      SOLITAIR_URL: ${{ secrets.SOLITAIR_URL }}
+      ORIGIN_LINK: ${{ secrets.ORIGIN_LINK }}
+      SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+      SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+      EMAIL01: ${{ secrets.EMAIL01 }}
+      EMAIL02: ${{ secrets.EMAIL02 }}
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      GOOGLE_MODEL: ${{ secrets.GOOGLE_MODEL }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'  # Adjust if needed
+
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run your script
+        run: python your_script.py  # Replace with your actual script filename
