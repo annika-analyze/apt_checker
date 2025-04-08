@@ -26,11 +26,11 @@ if __name__ == "__main__":
             favorite_layouts = favorite_layouts
         )
         logging.info(f"Available units fetched successfully")
+        if not current_units:
+            raise ValueError("No available units found")
+        
     except Exception as e:
-        logging.error(f"Error when fetching available units: {str(e)}")
-        current_units = []
-        logging.info(f"Using empty list for current units")
-        current_units = []
+        raise ValueError(f"Error when fetching available units {str(e)}") 
 
     
     prompt = fromat_unit_alert_prompt(current_units, Config.ORIGIN_LINK)
