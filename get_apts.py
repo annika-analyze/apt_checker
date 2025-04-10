@@ -41,7 +41,7 @@ def fromat_unit_alert_prompt(units, link):
     prompt = f"""" 
         Please format the following list of apartments into a friendly email alert. 
         Make sure to make the email exciting and fun to read, so use emojis and exclamation points for the intro and outro.
-        You can even say girlll, slayyy, gucci gang, or any other fun words if you want to! 
+        You can even say pretty girls, girlll, slayyy, gucci gang, baby slay, or any other fun words if you want to! 
         Create something original, bold, and unexpected.
 
         For the body of the email, please include the following information for each apartment:
@@ -49,14 +49,13 @@ def fromat_unit_alert_prompt(units, link):
             - Available date (Please format this as "Available on: MM/DD/YYYY")
 
         Put apartment 2004 first, and then the rest in order of price low to high.
-        This information should be formatted neatly for easy reading. Do not use astericks, just bullet points or dashes,
+        This information should be formatted neatly for easy reading. USE NO astericks, just bullet points or dashes,
         and a space between each apartment.
 
         Include the following information at the end of the email:
         - This link: {link}.
-        - And tell my girlfriend to text me if she has any questions!
-        - The date and time of the email
-        - From: Apartment Bot Bestie 💌
+        - And tell my girlfriend that I love her and I can't wait to move in together!
+        - From: Apartment Bot Bestie 💌 (add something fun here)
 
         Only respond with the information, as if you were typing the body of an email! We don't need a subject line.
         Here is the list of apartments:
