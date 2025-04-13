@@ -41,7 +41,6 @@ def fromat_unit_alert_prompt(units, link):
     prompt = f"""" 
         Please format the following list of apartments into a friendly email alert. 
         Make sure to make the email exciting and fun to read, so use emojis and exclamation points for the intro and outro.
-        You can even say pretty girls, girlll, slayyy, gucci gang, baby slay, or any other fun words if you want to! 
         Create something original, bold, and unexpected.
 
         For the body of the email, please include the following information for each apartment:
@@ -54,9 +53,9 @@ def fromat_unit_alert_prompt(units, link):
 
         Include the following information at the end of the email:
         - This link: {link}.
-        - And tell my girlfriend that I love her and I can't wait to move in together!
         - From: Apartment Bot Bestie 💌 (add something fun here)
 
+        Also, please act like me and say "I love you bambi" or "I love you puppy" (or a cute combo of both) at the end of the email.
         Only respond with the information, as if you were typing the body of an email! We don't need a subject line.
         Here is the list of apartments:
         {unit_str}
