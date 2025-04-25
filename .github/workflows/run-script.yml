@@ -1,8 +1,8 @@
 name: Scheduled Python Script
 
 on:
-  schedule:
-    - cron: '0 0,12 * * *'  # Every minute
+  # schedule:
+  #   - cron: '0 0,12 * * *'  # Every minute
   workflow_dispatch:       # Optional: manual trigger from GitHub UI
 
 jobs:
